@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ficha evaluación administrador
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        body{
+         
+        }
+        table {
+            border: 1px solid black;
+            font-size: 70%;
+            width: 95%;
+            height: 100%;
+            position: relative;
+            left: 3vw;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            width: 6%;
+            border: 1px solid black;
+            background: rgb(245, 245, 245);
+        }
+
+        th {
+            background: gray;
+        }
+
+        #tiempo {
+            font-size: 60%;
+            position: relative;
+            left: 40px;
+        }
+        #descuento {
+            font-size: 60%;
+            position: relative;
+            left: 40px;
+        }
+
+        #modificar-columna {
+            font-size: 60%;
+            position: relative;
+            left: 40px;
+        }
+
+        #agregar-columna {
+            font-size: 63%;
+            position: relative;
+            left: 40px;
+        }
+        #agregar-evaluador{
+            font-size: 60%;
+            position: relative;
+            left: 50px;
+        }
+        
+        #editar-descuento {
+            font-size: 63%;
+            position: relative;
+            left: 40px;
+        }
+
+        #editar-tiempo {
+            font-size: 63%;
+            position: relative;
+            left: 40px;
+        }
+        #editar-fecha {
+            font-size: 63%;
+            position: relative;
+            left: 40px;
+        }
+        #exportar {
+            font-size: 63%;
+            position: relative;
+            left: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .btn-responsive {
+                padding: 2px 4px;
+                font-size: 80%;
+                line-height: 1;
+                border-radius: 3px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 992px) {
+            .btn-responsive {
+                padding: 4px 9px;
+                font-size: 90%;
+                line-height: 1.2;
+            }
+        }
+
+        #evaluadores{}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Sistema de Evaluaciones</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Evaluadores</a></li>
+                <li><a href="#">Evaluaciones</a></li>
+                <li><a href="#">Rubricas</a></li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+  
+    <h1 style="text-align: center">Evaluación Tarea 2</h1>
+    <br>
+
+    <p style="font-weight: bold;position: relative;">Curso:</p>
+    <p style="font-weight: bold;;position: relative;">Estado evaluación: </p>
+    <p style="font-weight: bold;position: relative;">Fecha inicio:</p>
+    <p style="font-weight: bold;;position: relative;">Fecha fin:   </p>
+    <p style="font-weight: bold;position: relative;">Duración esperada:</p>   
+    <button type="button" class="btn btn-default btn-responsive" id="editar-fecha">Editar</button></p>   
+
+    <br><br>
+    <div id="seccion-botones">
+        <button type="button" class="btn btn-default btn-responsive" id="agregar-columna">Agregar columna</button>
+        <button type="button" class="btn btn-default btn-responsive" id="modificar-columna">Modificar</button>
+
+    </div>
+    <br>
+    <div style="overflow-x:auto;text-align: center">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>0.0</th>
+                    <th>0.3</th>
+                    <th>0.7</th>
+                    <th>1.0</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Modelo de datos</td>
+                    <td>No incluye su modelo de datos</td>
+                    <td>Incluye su modelo de datos, pero no explica las entidades principales</td>
+                    <td>Incluye su modelo de datos, y explica las entidades principales</td>
+                    <td>Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas</td>
+
+                </tr>
+                <tr>
+                    <td>Demo: completitud c/r a funcionalidad solicitada</td>
+                    <td>Solo describe las interfaces, sin explicar cómo satisfacen los requisitos</td>
+                    <td>Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales</td>
+                    <td>Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales</td>
+                    <td>Muestra claramente que las interfaces satisfacen los requisitos funcionales</td>
+                </tr>
+                <tr>
+                    <td>Demo: fallas</td>
+                    <td>Demasiadas fallas severas durante la demo, no se pudo continuar haciendo la demo</td>
+                    <td>Varias fallas de mediana severidad durante la demo, solo se pudo mostrar en forma parcial la
+                        funcionalidad</td>
+                    <td>Algunas fallas de mediana severidad durante la demo, se pudo mostrar en forma casi completa la
+                        funcionalidad</td>
+                    <td>Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
+                        funcionalidad</td>
+                </tr>
+
+                <tr>
+                    <td>Calidad del material (presentación y demo)</td>
+                    <td>Presentación: muchos errores ortográficos, todas las imágenes son de baja resolución.
+                        Demo:usan nombres genéricos para items, repiten casi todas las imágenes en la demo</td>
+                    <td>Presentación: algunos errores ortográficos, casi todas las imágenes son de baja resolución.
+                        Demo:usan algunos nombres genéricos, repiten algunas imágenes en la demo</td>
+
+                    <td>Presentación: pocos errores ortográficos,solo algunas imágenes son de baja resolución. Demo:
+                        solo usan
+                        algunos nombres genéricos, solo repiten algunas imágenes en la demo</td>
+                    <td>Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no
+                        usan
+                        nombres genéricos ni repiten imágenes</td>
+
+                </tr>
+                <tr>
+                    <td>Organización de la información</td>
+                    <td>No se entiende la presentación o demo porque no hay secuencia lógica</td>
+                    <td>Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas</td>
+                    <td>La información está presentada en una secuencia lógica</td>
+                    <td>La información es presentada en una forma lógica e interesante</td>
+                </tr>
+                <tr>
+                    <td>Forma</td>
+                    <td>No se entiende lo que dice (en términos) fonéticos y cinéticos)</td>
+                    <td>Se entiende lo que dice la manera parcial (su cuerpo no acompaña sus palabras)</td>
+                    <td>Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal</td>
+                    <td>Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
+                        otros)</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div id="seccion-tiempo">
+        <input type="text" name="fname" class="borde btn-responsive " id="tiempo" placeholder="Tiempo presentación"
+            style="HEIGHT: 2vw;width:10vw">
+        <button type="button" class="btn btn-default btn-responsive" id="editar-tiempo">Editar tiempo</button>
+    </div>
+
+    <div id="seccion-tiempo">
+            <input type="text" name="fname" class="borde btn-responsive " id="descuento" placeholder="Descuento"
+                style="HEIGHT: 2vw;width:10vw">
+            <button type="button" class="btn btn-default btn-responsive" id="editar-descuento">Editar descuento</button>
+        </div>
+
+    <h4>Evaluadores</h4>
+   <ul>
+       <li>Evaluador 1 <button type="button" class="btn btn-default btn-responsive" id="agregar-evaluador">Eliminar</button>
+       </li>
+       <li>Evaluador 2 <button type="button" class="btn btn-default btn-responsive" id="agregar-evaluador">Eliminar</button>
+        </li>
+        <li>Evaluador 3    <button type="button" class="btn btn-default btn-responsive" id="agregar-evaluador">Eliminar</button>
+            </li>
+   </ul>
+    <button type="button" class="btn btn-default btn-responsive" id="agregar-evaluador">Agregar evaluador</button>
+
+    <h4>Equipos pendientes </h4>
+    <ul>
+        <li>Equipo 2 
+        </li>
+        <li>Equipo 6 
+         </li>
+         <li>Equipo 4
+             </li>
+    </ul>
+    <br>
+    <h4>Equipos que presentaron </h4>
+    <ul>
+        <li>Equipo 1
+        </li>
+        <li>Equipo 3 
+         </li>
+         <li>Equipo 5
+             </li>
+    </ul>
+    <br>
+    <button type="button" class="btn btn-default btn-responsive" id="exportar">Exportar puntajes</button><img src="excel.ico">
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
