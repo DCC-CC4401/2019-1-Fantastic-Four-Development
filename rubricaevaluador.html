@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Rubrica evaluador
-            </title>
+    <title>Rubrica evaluador</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
@@ -10,25 +9,57 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
-table {
+
+
+.table {
     border:1px solid black;
-  font-size:70%;
-  width: 95%;
-  height: 100%;
-  position:relative;
-  left:3vw;
+	font-size:70%;
+	width: 95%;
+	height: 100%;
+	position:relative;
+	left:3vw;
+    overflow-x:auto;
+    text-align: center
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
-  width: 6%;  
-  border:1px solid black;
-  background:rgb(245, 245, 245);
+row {
+    display: table-row;
 }
 
-th{
-    background:gray;
+row a, row p {
+    background: rgb(245, 245, 245);
+    display: table-cell;
+    border: 1px solid black; 
+    padding: 8px;
+    text-align: left;
+    width: 6%;
+    text-decoration: none;
+    color: black;
+}
+
+row.table-header p {
+	background-color: gray;
+}
+
+row a:hover {
+	background: rgb(200, 200, 200);	
+    text-decoration: none;
+    color: black;
+}
+
+row a.selected {
+	background: rgb(200, 200, 200);	
+    text-decoration: none;
+    color: black;
+}
+
+.btn-container {
+	text-align: center;
+}
+button.table-btn {
+	position: relative;
+	margin: auto;
+	width: 10vw;
 }
 
 
@@ -49,12 +80,8 @@ th{
                 <div id="navbarCollapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Inicio</a></li>
-                        <li><a href="#">Cursos</a></li>
-                        <li><a href="#">Evaluadores</a></li>
                         <li><a href="#">Evaluaciones</a></li>
-                        <li><a href="#">Rubricas</a></li>
-                    </ul>
-                  
+                    </ul>                  
              
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Cerrar Sesión</a></li>
@@ -63,80 +90,84 @@ th{
             </nav>
         
 
-<div style="overflow-x:auto;text-align: center">
-  <table>
-                   <thead>
-                    <tr>
-                        <th></th>
-                        <th>0.0</th>
-                        <th>0.3</th>
-                        <th>0.7</th>
-                        <th>1.0</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Modelo de datos</td>
-                        <td>No incluye su modelo de datos</td>
-                        <td>Incluye su modelo de datos, pero no explica las entidades principales</td>
-                        <td>Incluye su modelo de datos, y explica las entidades principales</td>
-                        <td>Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas</td>
-    
-                    </tr>
-                    <tr>
-                        <td>Demo: completitud c/r a funcionalidad solicitada</td>
-                        <td>Solo describe las interfaces, sin explicar cómo satisfacen los requisitos</td>
-                        <td>Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales</td>
-                        <td>Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales</td>
-                        <td>Muestra claramente que las interfaces satisfacen los requisitos funcionales</td>
-                    </tr>
-                    <tr>
-                        <td>Demo: fallas</td>
-                        <td>Demasiadas fallas severas durante la demo, no se pudo continuar haciendo la demo</td>
-                        <td>Varias fallas de mediana severidad durante la demo, solo se pudo mostrar en forma parcial la
-                            funcionalidad</td>
-                        <td>Algunas fallas de mediana severidad durante la demo, se pudo mostrar en forma casi completa la
-                            funcionalidad</td>
-                        <td>Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
-                            funcionalidad</td>
-                    </tr>
-    
-                    <tr>
-                        <td>Calidad del material (presentación y demo)</td>
-                        <td>Presentación: muchos errores ortográficos, todas las imágenes son de baja resolución.
-                            Demo:usan nombres genéricos para items, repiten casi todas las imágenes en la demo</td>
-                        <td>Presentación: algunos errores ortográficos, casi todas las imágenes son de baja resolución.
-                            Demo:usan algunos nombres genéricos, repiten algunas imágenes en la demo</td>
-    
-                        <td>Presentación: pocos errores ortográficos,solo algunas imágenes son de baja resolución. Demo: solo usan
-                            algunos nombres genéricos, solo repiten algunas imágenes en la demo</td>
-                        <td>Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no usan
-                            nombres genéricos ni repiten imágenes</td>
-    
-                    </tr>
-                    <tr>
-                        <td>Organización de la información</td>
-                        <td>No se entiende la presentación o demo porque no hay secuencia lógica</td>
-                        <td>Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas</td>
-                        <td>La información está presentada en una secuencia lógica</td>
-                        <td>La información es presentada en una forma lógica e interesante</td>
-                    </tr>
-                    <tr>
-                        <td>Forma</td>
-                        <td>No se entiende lo que dice (en términos) fonéticos y cinéticos)</td>
-                        <td>Se entiende lo que dice la manera parcial (su cuerpo no acompaña sus palabras)</td>
-                        <td>Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal</td>
-                        <td>Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
-                            otros)</td>
-                    </tr>
-        
-                </tbody>
-  </table>
+<div class="table">
+	<row class="table-header">
+	    <p></p>
+	    <p>0.0</p>
+	    <p>0.3</p>
+	    <p>0.7</p>
+	    <p>1.0</p>
+	</row>
+	<row class="table-row">
+	   <p class="row-name">Modelo de datos</p>
+	   <a onclick="selector(this);">No incluye su modelo de datos</a>
+	   <a onclick="selector(this);">Incluye su modelo de datos, pero no explica las entidades principales</a>
+	   <a onclick="selector(this);">Incluye su modelo de datos, y explica las entidades principales</a>
+	   <a onclick="selector(this);">Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas</a>
+
+	</row>
+	<row class="table-row">
+	   <p class="row-name">Demo: completitud c/r a funcionalidad solicitada</p>
+	   <a onclick="selector(this);">Solo describe las interfaces, sin explicar cómo satisfacen los requisitos</a>
+	   <a onclick="selector(this);">Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales</a>
+	   <a onclick="selector(this);">Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales</a>
+	   <a onclick="selector(this);">Muestra claramente que las interfaces satisfacen los requisitos funcionales</a>
+	</row>
+	<row class="table-row">
+	   <p class="row-name">Demo: fallas</p>
+	   <a onclick="selector(this);">Demasiadas fallas severas durante la demo, no se pudo continuar haciendo la demo</a>
+	   <a onclick="selector(this);">Varias fallas de mediana severidad durante la demo, solo se pudo mostrar en forma parcial la
+	        funcionalidad</a>
+	   <a onclick="selector(this);">Algunas fallas de mediana severidad durante la demo, se pudo mostrar en forma casi completa la
+	        funcionalidad</a>
+	   <a onclick="selector(this);">Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
+	        funcionalidad</a>
+	</row>
+
+	<row class="table-row">
+	   <p class="row-name">Calidad del material (presentación y demo)</p>
+	   <a onclick="selector(this);">Presentación: muchos errores ortográficos, todas las imágenes son de baja resolución.
+	        Demo:usan nombres genéricos para items, repiten casi todas las imágenes en la demo</a>
+	   <a onclick="selector(this);">Presentación: algunos errores ortográficos, casi todas las imágenes son de baja resolución.
+	        Demo:usan algunos nombres genéricos, repiten algunas imágenes en la demo</a>
+
+	   <a onclick="selector(this);">Presentación: pocos errores ortográficos,solo algunas imágenes son de baja resolución. Demo: solo usan
+	        algunos nombres genéricos, solo repiten algunas imágenes en la demo</a>
+	   <a onclick="selector(this);">Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no usan
+	        nombres genéricos ni repiten imágenes</a>
+
+	</row>
+	<row class="table-row">
+	   <p class="row-name">Organización de la información</p>
+	   <a onclick="selector(this);">No se entiende la presentación o demo porque no hay secuencia lógica</a>
+	   <a onclick="selector(this);">Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas</a>
+	   <a onclick="selector(this);">La información está presentada en una secuencia lógica</a>
+	   <a onclick="selector(this);">La información es presentada en una forma lógica e interesante</a>
+	</row>
+	<row class="table-row">
+	   <p class="row-name">Forma</p>
+	   <a onclick="selector(this);">No se entiende lo que dice (en términos) fonéticos y cinéticos)</a>
+	   <a onclick="selector(this);">Se entiende lo que dice la manera parcial (su cuerpo no acompaña sus palabras)</a>
+	   <a onclick="selector(this);">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal</a>
+	   <a onclick="selector(this);">Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
+	        otros)</a>
+	</row>
 </div>
 
+<div class="btn-container">
+	<button class="table-btn">Guardar</button>
+</div>
 
-<br>
-<br>
-<br>
+<script type="text/javascript">
+	function selector(element) {
+		var row = element.parentNode;
+		for (var i = 0; i < row.children.length; i++) {
+			if (!row.children.item(i).classList.contains("row-name")) {
+				row.children.item(i).classList.remove("selected");
+			}
+		}
+		element.classList.add("selected");
+	}
+</script>
 </body>
 </html>
