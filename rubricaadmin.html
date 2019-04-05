@@ -18,7 +18,6 @@ table {
   position:relative;
   left:3vw;
 }
-
 th, td {
   text-align: left;
   padding: 8px;
@@ -26,13 +25,18 @@ th, td {
   border:1px solid black;
   background:rgb(245, 245, 245);
 }
-
 th{
     background:gray;
+    color: white;
 }
 
+.btn-container {
+    text-align: center;
+}
 
-
+button {
+    position: relative;
+}
 </style>
 </head>
 <body>
@@ -48,11 +52,11 @@ th{
                 </div>
                 <div id="navbarCollapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Inicio</a></li>
                         <li><a href="#">Cursos</a></li>
                         <li><a href="#">Evaluadores</a></li>
                         <li><a href="#">Evaluaciones</a></li>
-                        <li><a href="#">Rubricas</a></li>
+                        <li class="active"><a href="#">Rubricas</a></li>
                     </ul>
                   
              
@@ -133,10 +137,26 @@ th{
                 </tbody>
   </table>
 </div>
+<br>
+<div>
+    <table style="width: 30%">
+        <tbody>
+        <tr>
+            <td>Tiempo mínimo</td>
+            <td><input type="text" name="tmin"> minutos.</td>
+        </tr>
+        <tr>
+            <td>Tiempo máximo</td> 
+            <td><input type="text" name="tmax"> minutos.</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
-
-<br>
-<br>
-<br>
+<div class="btn-container">
+    <button>Guardar</button>
+    <button>Editar aspectos</button>
+    <button>Editar niveles</button>
+</div>
 </body>
 </html>
