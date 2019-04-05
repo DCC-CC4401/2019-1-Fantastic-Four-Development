@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Resumen
+        <title>Resumen de Evaluación
             </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,44 +11,233 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
 
+.puntajes {
+	border: 0px;
+	
+	width:  95%;
+	height: 100%;
+	position: relative;
+}
+.puntajes_head {
+	background:#1150AF;
+	color:#FFFFFF;
+	text-align:center;
+	width: 14%;
+	padding: 4px;
+}
 
+.puntajes_body {
+	text-align:center;
+	width: 14%;
+}
+
+tr:nth-child(even) {background-color: #C1DAFF;}
+
+.table1 {
+    border:1px solid black;
+  font-size:80%;
+  width: 95%;
+  height: 100%;
+  position:relative;
+  left:3vw;
+}
+
+.td1 {
+  text-align: left;
+  padding: 8px;
+  width: 6%;  
+  border:1px solid black;
+  background:rgb(245, 245, 245);
+}
+
+.th1 {
+	text-align: left;
+	padding: 8px;
+	width: 6%;  
+	border:1px solid black;
+    background:gray;
+	color:white;
+}
+
+.info{
+	margin-left: 50px;
+}
+
+li {
+	font-size:120%;
+}
+
+h1 {
+	font-family:Verdana
+}
 
 
 </style>
 </head>
-<body>
-        <nav class="navbar navbar-inverse">
-                <div class="navbar-header">
-                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="#" class="navbar-brand">Sistema de Evaluaciones</a>
-                </div>
-                <div id="navbarCollapse" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Inicio</a></li>
-                        <li><a href="#">Cursos</a></li>
-                        <li><a href="#">Evaluadores</a></li>
-                        <li><a href="#">Evaluaciones</a></li>
-                        <li><a href="#">Rubricas</a></li>
-                    </ul>
-                  
-             
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Cerrar Sesión</a></li>
-                    </ul>
-                </div>
-            </nav>
-        
-
-
-
-
-<br>
-<br>
-<br>
+<body style="background-color:#EDF4FF">
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+			<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+				<span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Sistema de Evaluaciones</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Ingresar</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+	<div class="info">
+		<h1><b>Presentación 1<br>Análisis de Software CC1337 Sección 1<br>Otoño 2014</b></h1>
+		<p style="font-size:130%;"><b>Fecha: 16 de Abril, 2014</b></p>
+		<table class="puntaje">
+			<tr>
+				<td style="width:40%; vertical-align:text-top;">
+					<h2>Grupo 7 "Nombre Creativo"</h2>
+					<ul>
+						<li>Ángel Parra</li>
+						<li><b style="color:#206D00">Miriam Gallardo</b></li>
+						<li>Elena Dominguez</li>
+						<li><b style="color:#206D00">Eduardo Martínez</b></li>
+					</ul>
+				</td>
+				<td style="width:40%; vertical-align:text-top;">
+					<h2>Evaluadores</h2>
+					<ul>
+						<li>Julia Cabrera</li>
+						<li>Alejandro Reyes</li>
+						<li>Claudia Marquez</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<h2>Puntajes obtenidos</h2>
+		<div style="overflow-x:auto;">
+			<table class="puntajes">
+				<thead>
+					<th class="puntajes_head" style="border-radius: 10px 0px 0px 10px;">Evaluador</th>
+					<th class="puntajes_head">Modelo de datos</th>
+					<th class="puntajes_head">Demo: completitud</th>
+					<th class="puntajes_head">Demo: fallas</th>
+					<th class="puntajes_head">Calidad del material</th>
+					<th class="puntajes_head">Organización</th>
+					<th class="puntajes_head" style="border-radius: 0px 10px 10px 0px;">Forma</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="puntajes_body" style="border-radius: 10px 0px 0px 10px;">Evaluador 1</td>
+						<td class="puntajes_body">0.3</td>
+						<td class="puntajes_body">0.7</td>
+						<td class="puntajes_body">1.0</td>
+						<td class="puntajes_body">0.7</td>
+						<td class="puntajes_body">1.0</td>
+						<td class="puntajes_body" style="border-radius: 0px 10px 10px 0px;">0.7</td>
+					</tr>
+					<tr>
+						<td class="puntajes_body" style="border-radius: 10px 0px 0px 10px;">Evaluador 2</td>
+						<td class="puntajes_body">0.7</td>
+						<td class="puntajes_body">0.7</td>
+						<td class="puntajes_body">0.7</td>
+						<td class="puntajes_body">0.7</td>
+						<td class="puntajes_body">1.0</td>
+						<td class="puntajes_body" style="border-radius: 0px 10px 10px 0px;">0.7</td>
+					</tr>
+					<tr>
+						<td class="puntajes_body" style="border-radius: 10px 0px 0px 10px;">Evaluador 3</td>
+						<td class="puntajes_body">1.0</td>
+						<td class="puntajes_body">0.7</td>
+						<td class="puntajes_body">1.0</td>
+						<td class="puntajes_body">0.7</td>
+						<td class="puntajes_body">1.0</td>
+						<td class="puntajes_body" style="border-radius: 0px 10px 10px 0px;">0.7</td>
+					</tr>
+					<tr>
+						<td class="puntajes_body" style="border-radius: 10px 0px 0px 10px;">Promedio Curso</td>
+						<td class="puntajes_body">0.85</td>
+						<td class="puntajes_body">0.66</td>
+						<td class="puntajes_body">0.89</td>
+						<td class="puntajes_body">0.96</td>
+						<td class="puntajes_body">0.82</td>
+						<td class="puntajes_body" style="border-radius: 0px 10px 10px 0px;">0.93</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<h2>Rúbrica utilizada</h2>
+	</div>
+	
+	<div style="overflow-x:auto;text-align: center">
+		<table class="table1">
+            <thead>
+                <tr>
+                    <th class="th1"></th>
+                    <th class="th1">0.0</th>
+                    <th class="th1">0.3</th>
+                    <th class="th1">0.7</th>
+                    <th class="th1">1.0</th>
+                </tr>
+            </thead>
+            <tbody>
+				<tr>
+					<td class="td1">Modelo de datos</td>
+					<td class="td1">No incluye su modelo de datos</td>
+					<td class="td1">Incluye su modelo de datos, pero no explica las entidades principales</td>
+					<td class="td1">Incluye su modelo de datos, y explica las entidades principales</td>
+					<td class="td1">Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas</td>
+				</tr>
+				<tr>
+					<td class="td1">Demo: completitud c/r a funcionalidad solicitada</td>
+					<td class="td1">Solo describe las interfaces, sin explicar cómo satisfacen los requisitos</td>
+					<td class="td1">Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales</td>
+					<td class="td1">Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales</td>
+					<td class="td1">Muestra claramente que las interfaces satisfacen los requisitos funcionales</td>
+				</tr>
+				<tr>
+					<td class="td1">Demo: fallas</td>
+					<td class="td1">Demasiadas fallas severas durante la demo, no se pudo continuar haciendo la demo</td>
+					<td class="td1">Varias fallas de mediana severidad durante la demo, solo se pudo mostrar en forma parcial la
+						funcionalidad</td>
+					<td class="td1">Algunas fallas de mediana severidad durante la demo, se pudo mostrar en forma casi completa la
+						funcionalidad</td>
+					<td class="td1">Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
+						funcionalidad</td>
+				</tr>
+				<tr>
+					<td class="td1">Calidad del material (presentación y demo)</td>
+					<td class="td1">Presentación: muchos errores ortográficos, todas las imágenes son de baja resolución.
+						Demo:usan nombres genéricos para items, repiten casi todas las imágenes en la demo</td>
+					<td class="td1">Presentación: algunos errores ortográficos, casi todas las imágenes son de baja resolución.
+						Demo:usan algunos nombres genéricos, repiten algunas imágenes en la demo</td>
+					<td class="td1">Presentación: pocos errores ortográficos,solo algunas imágenes son de baja resolución. Demo: solo usan
+						algunos nombres genéricos, solo repiten algunas imágenes en la demo</td>
+					<td class="td1">Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no usan
+						nombres genéricos ni repiten imágenes</td>
+				</tr>
+				<tr>
+					<td class="td1">Organización de la información</td>
+					<td class="td1">No se entiende la presentación o demo porque no hay secuencia lógica</td>
+					<td class="td1">Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas</td>
+					<td class="td1">La información está presentada en una secuencia lógica</td>
+					<td class="td1">La información es presentada en una forma lógica e interesante</td>
+				</tr>
+				<tr>
+					<td class="td1">Forma</td>
+					<td class="td1">No se entiende lo que dice (en términos) fonéticos y cinéticos)</td>
+					<td class="td1">Se entiende lo que dice la manera parcial (su cuerpo no acompaña sus palabras)</td>
+					<td class="td1">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal</td>
+					<td class="td1">Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
+						otros)</td>
+				</tr>
+				<tr>
+					<td class="td1" colspan=5 style="text-align:center;font-size:130%;"><b>Tiempo para presentar: 6 minutos</b></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
