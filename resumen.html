@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/rubrica.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
@@ -32,32 +33,6 @@
 }
 
 tr:nth-child(even) {background-color: #C1DAFF;}
-
-.table1 {
-    border:1px solid black;
-  font-size:80%;
-  width: 95%;
-  height: 100%;
-  position:relative;
-  left:3vw;
-}
-
-.td1 {
-  text-align: left;
-  padding: 8px;
-  width: 6%;  
-  border:1px solid black;
-  background:rgb(245, 245, 245);
-}
-
-.th1 {
-	text-align: left;
-	padding: 8px;
-	width: 6%;  
-	border:1px solid black;
-    background:gray;
-	color:white;
-}
 
 .info{
 	margin-left: 50px;
@@ -116,7 +91,7 @@ h1 {
 				</td>
 			</tr>
 		</table>
-		<h2>Puntajes obtenidos</h2>
+		<h2>Resultados</h2>
 		<div style="overflow-x:auto;">
 			<table class="puntajes">
 				<thead>
@@ -167,77 +142,80 @@ h1 {
 					</tr>
 				</tbody>
 			</table>
+			<br>
+			<p><b>Tiempo de presentación:</b> 7:30 minutos (Descuento de 0.3 puntos)</p>
 		</div>
 		<h2>Rúbrica utilizada</h2>
 	</div>
 	
 	<div style="overflow-x:auto;text-align: center">
-		<table class="table1">
+		<table class="rubrica">
             <thead>
                 <tr>
-                    <th class="th1"></th>
-                    <th class="th1">0.0</th>
-                    <th class="th1">0.3</th>
-                    <th class="th1">0.7</th>
-                    <th class="th1">1.0</th>
+                    <th class="rubrica_header"></th>
+                    <th class="rubrica_header">0.0</th>
+                    <th class="rubrica_header">0.3</th>
+                    <th class="rubrica_header">0.7</th>
+                    <th class="rubrica_header">1.0</th>
                 </tr>
             </thead>
             <tbody>
 				<tr>
-					<td class="td1">Modelo de datos</td>
-					<td class="td1">No incluye su modelo de datos</td>
-					<td class="td1">Incluye su modelo de datos, pero no explica las entidades principales</td>
-					<td class="td1">Incluye su modelo de datos, y explica las entidades principales</td>
-					<td class="td1">Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas</td>
+					<td class="rubrica_data">Modelo de datos</td>
+					<td class="rubrica_data">No incluye su modelo de datos</td>
+					<td class="rubrica_data">Incluye su modelo de datos, pero no explica las entidades principales</td>
+					<td class="rubrica_data">Incluye su modelo de datos, y explica las entidades principales</td>
+					<td class="rubrica_data">Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas</td>
 				</tr>
 				<tr>
-					<td class="td1">Demo: completitud c/r a funcionalidad solicitada</td>
-					<td class="td1">Solo describe las interfaces, sin explicar cómo satisfacen los requisitos</td>
-					<td class="td1">Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales</td>
-					<td class="td1">Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales</td>
-					<td class="td1">Muestra claramente que las interfaces satisfacen los requisitos funcionales</td>
+					<td class="rubrica_data">Demo: completitud c/r a funcionalidad solicitada</td>
+					<td class="rubrica_data">Solo describe las interfaces, sin explicar cómo satisfacen los requisitos</td>
+					<td class="rubrica_data">Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales</td>
+					<td class="rubrica_data">Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales</td>
+					<td class="rubrica_data">Muestra claramente que las interfaces satisfacen los requisitos funcionales</td>
 				</tr>
 				<tr>
-					<td class="td1">Demo: fallas</td>
-					<td class="td1">Demasiadas fallas severas durante la demo, no se pudo continuar haciendo la demo</td>
-					<td class="td1">Varias fallas de mediana severidad durante la demo, solo se pudo mostrar en forma parcial la
+					<td class="rubrica_data">Demo: fallas</td>
+					<td class="rubrica_data">Demasiadas fallas severas durante la demo, no se pudo continuar haciendo la demo</td>
+					<td class="rubrica_data">Varias fallas de mediana severidad durante la demo, solo se pudo mostrar en forma parcial la
 						funcionalidad</td>
-					<td class="td1">Algunas fallas de mediana severidad durante la demo, se pudo mostrar en forma casi completa la
+					<td class="rubrica_data">Algunas fallas de mediana severidad durante la demo, se pudo mostrar en forma casi completa la
 						funcionalidad</td>
-					<td class="td1">Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
+					<td class="rubrica_data">Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
 						funcionalidad</td>
 				</tr>
 				<tr>
-					<td class="td1">Calidad del material (presentación y demo)</td>
-					<td class="td1">Presentación: muchos errores ortográficos, todas las imágenes son de baja resolución.
+					<td class="rubrica_data">Calidad del material (presentación y demo)</td>
+					<td class="rubrica_data">Presentación: muchos errores ortográficos, todas las imágenes son de baja resolución.
 						Demo:usan nombres genéricos para items, repiten casi todas las imágenes en la demo</td>
-					<td class="td1">Presentación: algunos errores ortográficos, casi todas las imágenes son de baja resolución.
+					<td class="rubrica_data">Presentación: algunos errores ortográficos, casi todas las imágenes son de baja resolución.
 						Demo:usan algunos nombres genéricos, repiten algunas imágenes en la demo</td>
-					<td class="td1">Presentación: pocos errores ortográficos,solo algunas imágenes son de baja resolución. Demo: solo usan
+					<td class="rubrica_data">Presentación: pocos errores ortográficos,solo algunas imágenes son de baja resolución. Demo: solo usan
 						algunos nombres genéricos, solo repiten algunas imágenes en la demo</td>
-					<td class="td1">Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no usan
+					<td class="rubrica_data">Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no usan
 						nombres genéricos ni repiten imágenes</td>
 				</tr>
 				<tr>
-					<td class="td1">Organización de la información</td>
-					<td class="td1">No se entiende la presentación o demo porque no hay secuencia lógica</td>
-					<td class="td1">Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas</td>
-					<td class="td1">La información está presentada en una secuencia lógica</td>
-					<td class="td1">La información es presentada en una forma lógica e interesante</td>
+					<td class="rubrica_data">Organización de la información</td>
+					<td class="rubrica_data">No se entiende la presentación o demo porque no hay secuencia lógica</td>
+					<td class="rubrica_data">Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas</td>
+					<td class="rubrica_data">La información está presentada en una secuencia lógica</td>
+					<td class="rubrica_data">La información es presentada en una forma lógica e interesante</td>
 				</tr>
 				<tr>
-					<td class="td1">Forma</td>
-					<td class="td1">No se entiende lo que dice (en términos) fonéticos y cinéticos)</td>
-					<td class="td1">Se entiende lo que dice la manera parcial (su cuerpo no acompaña sus palabras)</td>
-					<td class="td1">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal</td>
-					<td class="td1">Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
+					<td class="rubrica_data">Forma</td>
+					<td class="rubrica_data">No se entiende lo que dice (en términos) fonéticos y cinéticos)</td>
+					<td class="rubrica_data">Se entiende lo que dice la manera parcial (su cuerpo no acompaña sus palabras)</td>
+					<td class="rubrica_data">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal</td>
+					<td class="rubrica_data">Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
 						otros)</td>
 				</tr>
 				<tr>
-					<td class="td1" colspan=5 style="text-align:center;font-size:130%;"><b>Tiempo para presentar: 6 minutos</b></td>
+					<td class="rubrica_data" colspan=5 style="text-align:center;font-size:130%;"><b>Tiempo para presentar: 5:00 a 7:00 minutos</b></td>
 				</tr>
 			</tbody>
 		</table>
+		<br>
 	</div>
 </body>
 </html>

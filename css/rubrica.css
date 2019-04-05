@@ -1,0 +1,25 @@
+.rubrica {
+    border:1px solid black;
+  font-size:80%;
+  width: 95%;
+  height: 100%;
+  position:relative;
+  left:3vw;
+}
+
+.rubrica_data {
+  text-align: left;
+  padding: 8px;
+  width: 6%;  
+  border:1px solid black;
+  background:rgb(245, 245, 245);
+}
+
+.rubrica_header {
+	text-align: left;
+	padding: 8px;
+	width: 6%;  
+	border:1px solid black;
+    background:gray;
+	color:white;
+}
