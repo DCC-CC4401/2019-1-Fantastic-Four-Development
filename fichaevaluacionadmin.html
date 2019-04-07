@@ -7,289 +7,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/rubrica.css">
+	<link rel="stylesheet" href="fonts/fontawesome-free-5.8.1-web/css/all.css">
     <script src="libs/js/jquery.min.js"></script>
     <script src="libs/js/bootstrap.min.js"></script>
-    <style>
-        body{
-         
-        }
-        .table {
-    border:1px solid black;
-    font-size:70%;
-    width: 95%;
-    height: 100%;
+	
+<style>
+
+.info-evaluacion {
+	font-size:120%;
+    width: 95%;    
     position:relative;
     left:3vw;
-    overflow-x:auto;
-    text-align: center
 }
 
-row {
-    display: table-row;
-}
-
-row a, row p {
-    background: rgb(245, 245, 245);
-    display: table-cell;
-    border: 1px solid black; 
-    padding: 8px;
-    text-align: left;
-    width: 6%;
-    text-decoration: none;
-    color: black;
-}
-
-row.table-header p {
-    background-color: gray;
-    color: white;
-}
-
-row a:hover {
-    background: rgb(200, 200, 200); 
+td:hover {
+    background: rgb(210, 230, 255); 
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
 
-row a.selected {
+td.selected {
     background: rgb(200, 200, 200); 
     text-decoration: none;
     color: black;
     cursor: default;
 }
 
-row.time {
-    display: block;
-}
-
-        #tiempo {
-            font-size: 60%;
-            position: relative;
-            left: 40px;
-        }
-        #descuento {
-            font-size: 60%;
-            position: relative;
-            left: 40px;
-        }
-
-        #modificar-columna {
-            font-size: 60%;
-            position: relative;
-            left: 40px;
-        }
-
-        #agregar-columna {
-            font-size: 63%;
-            position: relative;
-            left: 40px;
-        }
-        #agregar-evaluador{
-            font-size: 60%;
-            position: relative;
-            left: 50px;
-        }
-        
-        #editar-descuento {
-            font-size: 63%;
-            position: relative;
-            left: 40px;
-        }
-
-        #editar-tiempo {
-            font-size: 63%;
-            position: relative;
-            left: 40px;
-        }
-        #editar-fecha {
-            font-size: 63%;
-            position: relative;
-            left: 40px;
-        }
-        #exportar {
-            font-size: 63%;
-            position: relative;
-            left: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .btn-responsive {
-                padding: 2px 4px;
-                font-size: 80%;
-                line-height: 1;
-                border-radius: 3px;
-            }
-        }
-
-        @media (min-width: 769px) and (max-width: 992px) {
-            .btn-responsive {
-                padding: 4px 9px;
-                font-size: 90%;
-                line-height: 1.2;
-            }
-        }
-
-        #evaluadores{}
-
-    </style>
+</style>
 </head>
+<body style="background-color:#EDF4FF">
+	<nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">Sistema de Evaluaciones</a>
+		</div>
+		<div id="navbarCollapse" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Evaluaciones</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+	</nav>
 
-<body>
-    <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">Sistema de Evaluaciones</a>
-        </div>
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Evaluadores</a></li>
-                <li><a href="#">Evaluaciones</a></li>
-                <li><a href="#">Rubricas</a></li>
-            </ul>
+	<div class="info-evaluacion">
+		<p>
+		<span style="float:right"> <button class="btn btn-primary btn-sm">Exportar</button>&nbsp;&nbsp;
+		<button class="btn btn-primary btn-sm">Resumenes</button></span>
+		<h1><b>Evaluación 1</b>
+		<br>
+		CC4401 - Ingenieria de Software, Sección 1 Otoño 2019</h1></p>
+		<p><b>Fecha inicio:</b> Lunes 1 de Abril a las 00:00 hrs.
+		<br>
+		<b>Fecha término:</b> Sábado 20 de Abril a las 23:59 hrs.
+		<br>
+		<button class="btn btn-primary btn-sm">Editar fechas</button></p>
+		<p><b>Estado:</b> <span style="color:#20aa20">Abierto<span></p>
+		<p><b>Presentando:</b> Grupo 3 "Magnificent Trio" (Mario Sepúlveda, Roxana Soto)</p>
+	</div>
 
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Cerrar Sesión</a></li>
-            </ul>
-        </div>
-    </nav>
-  
-    <h1 style="text-align: center">Evaluación Tarea 2</h1>
-    <br>
-
-    <p style="font-weight: bold;position: relative;">Curso:</p>
-    <p style="font-weight: bold;;position: relative;">Estado evaluación: </p>
-    <p style="font-weight: bold;position: relative;">Fecha inicio:</p>
-    <p style="font-weight: bold;;position: relative;">Fecha fin:   </p>
-    <p style="font-weight: bold;position: relative;">Duración esperada:</p>   
-    <button type="button" class="btn btn-default btn-responsive" id="editar-fecha">Editar</button></p>   
-
-    <br><br>
-    <div id="seccion-botones">
-        <button type="button" class="btn btn-default btn-responsive" id="agregar-columna">Agregar columna</button>
-        <button type="button" class="btn btn-default btn-responsive" id="modificar-columna">Modificar</button>
-
-    </div>
-    <br>
-    <div class="table">
-    <row class="table-header">
-        <p></p>
-        <p>0.0</p>
-        <p>0.3</p>
-        <p>0.7</p>
-        <p>1.0</p>
-    </row>
-    <row>
-       <p class="row-name">Modelo de datos</p>
-       <a onclick="selector(this);">No incluye su modelo de datos</a>
-       <a onclick="selector(this);">Incluye su modelo de datos, pero no explica las entidades principales</a>
-       <a onclick="selector(this);">Incluye su modelo de datos, y explica las entidades principales</a>
-       <a onclick="selector(this);">Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas</a>
-
-    </row>
-    <row>
-       <p class="row-name">Demo: completitud c/r a funcionalidad solicitada</p>
-       <a onclick="selector(this);">Solo describe las interfaces, sin explicar cómo satisfacen los requisitos</a>
-       <a onclick="selector(this);">Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales</a>
-       <a onclick="selector(this);">Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales</a>
-       <a onclick="selector(this);">Muestra claramente que las interfaces satisfacen los requisitos funcionales</a>
-    </row>
-    <row>
-       <p class="row-name">Demo: fallas</p>
-       <a onclick="selector(this);">Demasiadas fallas severas durante la demo, no se pudo continuar haciendo la demo</a>
-       <a onclick="selector(this);">Varias fallas de mediana severidad durante la demo, solo se pudo mostrar en forma parcial la
-            funcionalidad</a>
-       <a onclick="selector(this);">Algunas fallas de mediana severidad durante la demo, se pudo mostrar en forma casi completa la
-            funcionalidad</a>
-       <a onclick="selector(this);">Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
-            funcionalidad</a>
-    </row>
-
-    <row>
-       <p class="row-name">Calidad del material (presentación y demo)</p>
-       <a onclick="selector(this);">Presentación: muchos errores ortográficos, todas las imágenes son de baja resolución.
-            Demo:usan nombres genéricos para items, repiten casi todas las imágenes en la demo</a>
-       <a onclick="selector(this);">Presentación: algunos errores ortográficos, casi todas las imágenes son de baja resolución.
-            Demo:usan algunos nombres genéricos, repiten algunas imágenes en la demo</a>
-
-       <a onclick="selector(this);">Presentación: pocos errores ortográficos,solo algunas imágenes son de baja resolución. Demo: solo usan
-            algunos nombres genéricos, solo repiten algunas imágenes en la demo</a>
-       <a onclick="selector(this);">Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no usan
-            nombres genéricos ni repiten imágenes</a>
-
-    </row>
-    <row>
-       <p class="row-name">Organización de la información</p>
-       <a onclick="selector(this);">No se entiende la presentación o demo porque no hay secuencia lógica</a>
-       <a onclick="selector(this);">Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas</a>
-       <a onclick="selector(this);">La información está presentada en una secuencia lógica</a>
-       <a onclick="selector(this);">La información es presentada en una forma lógica e interesante</a>
-    </row>
-    <row>
-       <p class="row-name">Forma</p>
-       <a onclick="selector(this);">No se entiende lo que dice (en términos) fonéticos y cinéticos)</a>
-       <a onclick="selector(this);">Se entiende lo que dice la manera parcial (su cuerpo no acompaña sus palabras)</a>
-       <a onclick="selector(this);">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal</a>
-       <a onclick="selector(this);">Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
-            otros)</a>
-    </row>
-</div>
-    <br>
-    <br>
-    <div id="seccion-tiempo">
-        <input type="text" name="fname" class="borde btn-responsive " id="tiempo" placeholder="Tiempo presentación"
-            style="HEIGHT: 2vw;width:10vw">
-        <button type="button" class="btn btn-default btn-responsive" id="editar-tiempo">Editar tiempo</button>
-    </div>
-
-    <div id="seccion-tiempo">
-            <input type="text" name="fname" class="borde btn-responsive " id="descuento" placeholder="Descuento"
-                style="HEIGHT: 2vw;width:10vw">
-            <button type="button" class="btn btn-default btn-responsive" id="editar-descuento">Editar descuento</button>
-        </div>
-
-    <h4>Evaluadores</h4>
-   <ul>
-       <li>Evaluador 1 <button type="button" class="btn btn-default btn-responsive" id="agregar-evaluador">Eliminar</button>
-       </li>
-       <li>Evaluador 2 <button type="button" class="btn btn-default btn-responsive" id="agregar-evaluador">Eliminar</button>
-        </li>
-        <li>Evaluador 3    <button type="button" class="btn btn-default btn-responsive" id="agregar-evaluador">Eliminar</button>
-            </li>
-   </ul>
-    <button type="button" class="btn btn-default btn-responsive" id="agregar-evaluador">Agregar evaluador</button>
-
-    <h4>Equipos pendientes </h4>
-    <ul>
-        <li>Equipo 2 
-        </li>
-        <li>Equipo 6 
-         </li>
-         <li>Equipo 4
-             </li>
-    </ul>
-    <br>
-    <h4>Equipos que presentaron </h4>
-    <ul>
-        <li>Equipo 1
-        </li>
-        <li>Equipo 3 
-         </li>
-         <li>Equipo 5
-             </li>
-    </ul>
-    <br>
-    <button type="button" class="btn btn-default btn-responsive" id="exportar">Exportar puntajes</button><img src="excel.ico">
-    <br>
-    <br>
-    <br>
+	<table class="rubrica">
+		<thead>
+			<tr class="table-header">
+				<th class="rubrica_header"></th>
+				<th class="rubrica_header">0.0</th>
+				<th class="rubrica_header">0.3</th>
+				<th class="rubrica_header">0.7</th>
+				<th class="rubrica_header">1.0</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="rubrica_data">Modelo de datos</p></td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">No incluye su modelo de datos</td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">Incluye su modelo de datos, pero no explica las entidades principales </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">Incluye su modelo de datos, y explica las entidades principales </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas </td>
+			</tr>
+			<tr>
+				<td class="rubrica_data">Demo: completitud c/r a funcionalidad solicitada</td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Solo describe las interfaces, sin explicar cómo satisfacen los requisitos </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Muestra claramente que las interfaces satisfacen los requisitos funcionales </td>
+			</tr>
+			<tr>
+				<td class="rubrica_data">Demo: fallas</td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Demasiadas fallas severas durante la demo, no se pudo continuar haciendo la demo </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Varias fallas de mediana severidad durante la demo, solo se pudo mostrar en forma parcial la
+					funcionalidad </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Algunas fallas de mediana severidad durante la demo, se pudo mostrar en forma casi completa la
+					funcionalidad </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
+					funcionalidad </td>
+			</tr>
+			<tr>
+				<td class="rubrica_data">Calidad del material (presentación y demo)</td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Presentación: muchos errores ortográficos, todas las imágenes son de baja resolución.
+					Demo:usan nombres genéricos para items, repiten casi todas las imágenes en la demo </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Presentación: algunos errores ortográficos, casi todas las imágenes son de baja resolución.
+					Demo:usan algunos nombres genéricos, repiten algunas imágenes en la demo </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Presentación: pocos errores ortográficos,solo algunas imágenes son de baja resolución. Demo: solo usan
+					algunos nombres genéricos, solo repiten algunas imágenes en la demo </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no usan
+					nombres genéricos ni repiten imágenes </td>
+			</tr>
+			<tr>
+				<td class="rubrica_data">Organización de la información</td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					No se entiende la presentación o demo porque no hay secuencia lógica </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					La información está presentada en una secuencia lógica </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					La información es presentada en una forma lógica e interesante </td>
+			</tr>
+			<tr>
+				<td class="rubrica_data">Forma</td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					No se entiende lo que dice (en términos) fonéticos y cinéticos) </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Se entiende lo que dice la manera parcial (su cuerpo no acompaña sus palabras) </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal </td>
+				<td class="rubrica_data" class="tdbt" onclick="selector(this);">
+					Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
+					otros) </td>
+			</tr>
+			<tr>
+				<td class="rubrica_data" colspan=5 style="text-align:center;font-size:130%;"><b>Tiempo para presentar: 5:00 a 7:00 minutos</b></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<div style="text-align:center;">
+		<b>Tiempo</b> &nbsp;&nbsp; <input type="text" name="tiempo" size="5"> &nbsp;&nbsp;
+		<input type="checkbox" name="descuento" value="Aplicar descuento" checked> Aplicar Descuento &nbsp;&nbsp;&nbsp;
+		<button class="btn btn-primary btn-lg" style="width:200px;">Enviar</button>
+		<br>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Grupos que ya presentaron:</h3>
+				<ul>
+					<li><button class="btn btn-primary btn-sm">Recorregir</button> Grupo 2 "JOLS"</li>
+					<li><button class="btn btn-primary btn-sm">Recorregir</button> Grupo 7 "Nombre Creativo"</li>
+				</ul>
+				<br>
+			</div>
+			<div class="col-md-4">
+				<h3>Grupos por presentar:</h3>
+				<ul>
+					<li><button class="btn btn-primary btn-sm">Evaluar</button>Grupo 6 "Un buen grupo"</li>
+				</ul>
+				<br>
+			</div>
+			<div class="col-md-4">
+				<h3>Evaluadores:</h3>
+				<ul>
+					<li><button class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button> Juan Gonzáles</li>
+					<li><button class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button> Pedro Godoy</li>
+				</ul>
+				<br>
+			</div>
+		</div>
+	</div>
+	<div style="text-align:center;">
+		<button class="btn btn-warning btn-lg">Terminar evaluación</button>
+		<br>
+		<br>
+	</div>
 
 <script type="text/javascript">
     function selector(element) {
@@ -303,5 +213,4 @@ row.time {
     }
 </script>
 </body>
-
 </html>
