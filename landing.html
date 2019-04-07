@@ -69,7 +69,7 @@ tr:nth-child(even) {background-color: #C1DAFF;}
 						<h1><i class="fas fa-caret-down"></i> Evaluadores</h1>
 					</a>
 				</p>
-				<div class="collapse" id="evaluadores">
+				<div class="collapse in" id="evaluadores">
 					<p>
 					<table class="tabla_info">
 						<thead>
@@ -115,67 +115,13 @@ tr:nth-child(even) {background-color: #C1DAFF;}
 					</table>
 					</p>
 				</div>
-			</div>
-			<div class="col-md-6">
-			<!--GESTIONAR RUBRICA-->
-				<p>
-					<a data-toggle="collapse" href="#rubricas" role="button" aria-expanded="false" aria-controls="rubricas">
-						<h1><i class="fas fa-caret-down"></i> Rubricas</h1>
-					</a>
-				</p>
-				<div class="collapse" id="rubricas">
-					<p>
-					<table class="tabla_info">
-						<thead>
-							<th class="tabla_info_head" style="border-radius: 10px 0px 0px 10px;">Nombre</th>
-							<th class="tabla_info_head" style="border-radius: 0px 10px 10px 0px;"></th>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rubrica para la primera presentación del curso</td>
-								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px; text-align=right">
-									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rúbrica 2</td>
-								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
-									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rúbrica mala</td>
-								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
-									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
-								</td>
-							</tr>
-							<tr>
-								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Gonzalo Rojas</td>
-								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
-									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
-								</td>
-							</tr>
-								<td class="tabla_info_body">
-									<button type="button" class="btn btn-primary" style="width:200px">+ Agregar rúbrica</button>
-								</td>
-							<tr>
-							</tr>
-					</tbody>
-				</table>
-				</p>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-6">
-			<!--GESTIONAR EVALUACIONES-->
+				<!--GESTIONAR EVALUACIONES-->
 				<p>
 					<a data-toggle="collapse" href="#evaluaciones" role="button" aria-expanded="false" aria-controls="evaluaciones">
 						<h1><i class="fas fa-caret-down"></i> Evaluaciones</h1>
 					</a>
 				</p>
-				<div class="collapse" id="evaluaciones">
+				<div class="collapse in" id="evaluaciones">
 					<p>
 					<table class="tabla_info">
 						<thead>
@@ -232,14 +178,69 @@ tr:nth-child(even) {background-color: #C1DAFF;}
 					</p>
 				</div>
 			</div>
+			
+			
 			<div class="col-md-6">
+			<!--GESTIONAR RUBRICA-->
+				<p>
+					<a data-toggle="collapse" href="#rubricas" role="button" aria-expanded="false" aria-controls="rubricas">
+						<h1><i class="fas fa-caret-down"></i> Rubricas</h1>
+					</a>
+				</p>
+				<div class="collapse in" id="rubricas">
+					<p>
+					<table class="tabla_info">
+						<thead>
+							<th class="tabla_info_head" style="border-radius: 10px 0px 0px 10px;">Nombre</th>
+							<th class="tabla_info_head" style="border-radius: 0px 10px 10px 0px;"></th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rubrica para la primera presentación del curso</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px; text-align=right">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rúbrica 2</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rúbrica mala</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Gonzalo Rojas</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+								<td class="tabla_info_body">
+									<button type="button" class="btn btn-primary" style="width:200px">+ Agregar rúbrica</button>
+								</td>
+							<tr>
+							</tr>
+						</tbody>
+					</table>
+					</p>
+				</div>
+		<!--</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+			-->
+			
 			<!--GESTIONAR CURSOS-->
 				<p>
 					<a data-toggle="collapse" href="#cursos" role="button" aria-expanded="false" aria-controls="cursos">
 						<h1><i class="fas fa-caret-down"></i> Cursos</h1>
 					</a>
 				</p>
-				<div class="collapse" id="cursos">
+				<div class="collapse in" id="cursos">
 					<p>
 					<table class="tabla_info">
 						<thead>
@@ -291,9 +292,9 @@ tr:nth-child(even) {background-color: #C1DAFF;}
 								</td>
 							<tr>
 							</tr>
-					</tbody>
-				</table>
-				</p>
+						</tbody>
+					</table>
+					</p>
 				</div>
 			</div>
 		</div>
