@@ -7,36 +7,11 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/rubrica.css">
+	<link rel="stylesheet" href="fonts/fontawesome-free-5.8.1-web/css/all.css">
     <script src="libs/js/jquery.min.js"></script>
     <script src="libs/js/bootstrap.min.js"></script>
 <style>
-table {
-    border:1px solid black;
-  font-size:70%;
-  width: 95%;
-  height: 100%;
-  position:relative;
-  left:3vw;
-}
-th, td {
-  text-align: left;
-  padding: 8px;
-  width: 6%;  
-  border:1px solid black;
-  background:rgb(245, 245, 245);
-}
-th{
-    background:gray;
-    color: white;
-}
 
-.btn-container {
-    text-align: center;
-}
-
-button {
-    position: relative;
-}
 </style>
 </head>
 <body style="background-color:#EDF4FF">
@@ -73,6 +48,7 @@ button {
 					<th class="rubrica_header">0.3</th>
 					<th class="rubrica_header">0.7</th>
 					<th class="rubrica_header">1.0</th>
+					<th style="border: 0px black solid;width:0.5%;"></th>
                 </tr>
 			</thead>
 			<tbody>
@@ -82,6 +58,9 @@ button {
 					<td class="rubrica_data">Incluye su modelo de datos, pero no explica las entidades principales</td>
 					<td class="rubrica_data">Incluye su modelo de datos, y explica las entidades principales</td>
 					<td class="rubrica_data">Incluye su modelo de datos, explica las entidades principales y las relaciones entre estas</td>
+					<td style="border: 0px black solid;width:0.5%;">
+						<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+					</td>
 				</tr>
 				<tr>
 					<td class="rubrica_data">Demo: completitud c/r a funcionalidad solicitada</td>
@@ -89,6 +68,9 @@ button {
 					<td class="rubrica_data">Solo para algunas interfaces muestra cómo satisfacen los requisitos funcionales</td>
 					<td class="rubrica_data">Para casi todas las interfaces, muestra cómo satisfacenlos requisitos funcionales</td>
 					<td class="rubrica_data">Muestra claramente que las interfaces satisfacen los requisitos funcionales</td>
+					<td style="border: 0px black solid;width:0.5%;">
+						<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+					</td>
 				</tr>
 				<tr>
 					<td class="rubrica_data">Demo: fallas</td>
@@ -99,6 +81,9 @@ button {
 						funcionalidad</td>
 					<td class="rubrica_data">Muy pocas fallas de baja severidad durante la demo, se pudo mostrar en forma completa la
 						funcionalidad</td>
+					<td style="border: 0px black solid;width:0.5%;">
+						<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+					</td>
 				</tr>
 				<tr>
 					<td class="rubrica_data">Calidad del material (presentación y demo)</td>
@@ -110,6 +95,9 @@ button {
 						algunos nombres genéricos, solo repiten algunas imágenes en la demo</td>
 					<td class="rubrica_data">Presentación: pocos errores ortográficos, todas las imágenes son de buena resolución. Demo: no usan
 						nombres genéricos ni repiten imágenes</td>
+					<td style="border: 0px black solid;width:0.5%;">
+						<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+					</td>
 				</tr>
 				<tr>
 					<td class="rubrica_data">Organización de la información</td>
@@ -117,6 +105,9 @@ button {
 					<td class="rubrica_data">Es dificil seguir la presentación o demo, perque el presentador "salta" entre diapositivas</td>
 					<td class="rubrica_data">La información está presentada en una secuencia lógica</td>
 					<td class="rubrica_data">La información es presentada en una forma lógica e interesante</td>
+					<td style="border: 0px black solid;width:0.5%;">
+						<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+					</td>
 				</tr>
 				<tr>
 					<td class="rubrica_data">Forma</td>
@@ -125,33 +116,31 @@ button {
 					<td class="rubrica_data">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal</td>
 					<td class="rubrica_data">Se da a entender siempre, destacando en su forma (pausas,dicción,contacto visual,gesticulación,
 						otros)</td>
+					<td style="border: 0px black solid;width:0.5%;">
+						<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+					</td>
 				</tr>
 				<tr>
 					<td class="rubrica_data" colspan=5 style="text-align:center;font-size:130%;"><b>Tiempo para presentar: 5:00 a 7:00 minutos</b></td>
 				</tr>
 			</tbody>
 		</table>
-</div>
-<br>
-<div>
-    <table style="width: 30%">
-        <tbody>
-        <tr>
-            <td>Tiempo mínimo</td>
-            <td><input type="text" name="tmin"> minutos.</td>
-        </tr>
-        <tr>
-            <td>Tiempo máximo</td> 
-            <td><input type="text" name="tmax"> minutos.</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-<div class="btn-container">
-    <button>Guardar</button>
-    <button>Editar aspectos</button>
-    <button>Editar niveles</button>
-</div>
+	</div>
+	<br>
+	<div style="margin-left:40px">
+		<button class="btn btn-primary"><i class="fas fa-plus"></i>  Agregar criterio</button>
+		<button class="btn btn-primary">Editar niveles de cumplimiento</button>
+		<p>
+		<form action="#" method="POST">
+			<b>Tiempos:</b>
+			&nbsp;&nbsp; Mínimo:
+			<input type="text" class="size="5" name="min" placeholder="5:00">
+			&nbsp;&nbsp; Máximo:
+			<input type="text" size="5" name="max" placeholder="7:00">
+			&nbsp;&nbsp;
+			<input type="submit" class="btn btn-light" value="Actualizar">
+		</form>
+		</p>
+	</div>
 </body>
 </html>
