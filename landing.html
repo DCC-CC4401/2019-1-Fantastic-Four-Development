@@ -2,119 +2,318 @@
 <html>
 <head>
     
-  <title>Inicio
-  </title>
+	<title>Inicio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <style>
-    .col {
-        border: 100px;
-	    border-style: hidden;
-        width:  150%;
-	    height: 120%;
-	    position: relative;
-        
-    }
-    
-    
-</style>
-    
+.tabla_info {
+	border: 0px;
+	
+	width:  95%;
+	height: 100%;
+	position: relative;
+}
+.tabla_info_head {
+	background:#1150AF;
+	color:#FFFFFF;
+	padding: 4px;
+}
+
+.tabla_info_body {
+	padding-left:5px;
+	padding: 2px;
+}
+
+tr:nth-child(even) {background-color: #C1DAFF;}
+
+
+</style>   
 </head>
 <body style="background-color: #EDF4FF">
-        <nav class="navbar navbar-inverse">
-                <div class="navbar-header">
-                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="landing.html" class="navbar-brand">Sistema de Evaluaciones</a>
-                </div>
-                <div id="navbarCollapse" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Inicio</a></li>
-                        <li><a href="#">Cursos</a></li>
-                        <li><a href="#">Evaluadores</a></li>
-                        <li><a href="fichaevaluacionadmin.html">Evaluaciones</a></li>
-                        <li><a href="rubricaadmin.html">Rubricas</a></li>
-                    </ul>
-                  
-             
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Cerrar Sesión</a></li>
-                    </ul>
-                </div>
-            </nav>
-  
-    
-   
-    <div class="container-fluid " >
+	
+    <nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="landing.html" class="navbar-brand">Sistema de Evaluaciones</a>
+		</div>
+		<div id="navbarCollapse" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Inicio</a></li>
+				<li><a href="#">Cursos</a></li>
+				<li><a href="#">Evaluadores</a></li>
+				<li><a href="fichaevaluacionadmin.html">Evaluaciones</a></li>
+				<li><a href="rubricaadmin.html">Rubricas</a></li>
+			</ul>             
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+	</nav> 
+
+    <div class="container">
         <div class="row">
-            <br>
-       <!--GESTIONAR EVALUADORES-->
-  <div class="dropdown col">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Gestionar Evaluadores
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Agregar Evaluador</a></li>
-    <li><a href="#">Modificar Evaluador</a></li>
-    <li><a href="#">Eliminar Evaluador</a></li>
-  </ul>
-</div>
-            <br>
-        <!--GESTIONAR EVALUACIONES-->
-    <div class="dropdown col" >
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Gestionar Evaluaciones
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="fichaevaluacionadmin.html">Agregar Evaluacion</a></li>
-    <li><a href="fichaevaluacionadmin.html">Modificar Evaluacion</a></li>
-    <li><a href="fichaevaluacionadmin.html">Eliminar Evaluacion</a></li>
-  </ul>
-</div>
-            <br>
-         <!--GESTIONAR CURSOS-->
-    <div class="dropdown col" >
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Gestionar Cursos
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Agregar Cursos</a></li>
-    <li><a href="#">Modificar Cursos</a></li>
-    <li><a href="#">Eliminar Cursos</a></li>
-  </ul>
-</div>
-        <br>
-          <!--GESTIONAR RUBRICA-->
-    <div class="dropdown col">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Gestionar Rubrica
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="rubricaadmin.html">Agregar Rubrica</a></li>
-    <li><a href="rubricaadmin.html">Modificar Rubrica</a></li>
-    <li><a href="rubricaadmin.html">Eliminar Rubrica</a></li>
-  </ul>
-</div>
-</div>
-</div>
+			<div class="col-md-6">
+			<!--GESTIONAR EVALUADORES-->
+				<p>
+					<a data-toggle="collapse" href="#evaluadores" role="button" aria-expanded="false" aria-controls="evaluadores">
+						<h1><i class="fas fa-caret-down"></i> Evaluadores</h1>
+					</a>
+				</p>
+				<div class="collapse" id="evaluadores">
+					<p>
+					<table class="tabla_info">
+						<thead>
+							<th class="tabla_info_head" style="border-radius: 10px 0px 0px 10px;">Nombre</th>
+							<th class="tabla_info_head">Correo</th>
+							<th class="tabla_info_head" style="border-radius: 0px 10px 10px 0px;"></th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Julia Cabrera</td>
+								<td class="tabla_info_body">julia_cabrera_1@gmail.com</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px; text-align=right">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Alejandro Reyes</td>
+								<td class="tabla_info_body">alereyes@hotmail.com</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Claudia Marquez</td>
+								<td class="tabla_info_body">claudia.marquez.d@gmail.com</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Gonzalo Rojas</td>
+								<td class="tabla_info_body">gonzalorojas1543@yahoo.com</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body">
+									<button type="button" class="btn btn-primary" style="width:200px">+ Agregar evaluador</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+			<!--GESTIONAR RUBRICA-->
+				<p>
+					<a data-toggle="collapse" href="#rubricas" role="button" aria-expanded="false" aria-controls="rubricas">
+						<h1><i class="fas fa-caret-down"></i> Rubricas</h1>
+					</a>
+				</p>
+				<div class="collapse" id="rubricas">
+					<p>
+					<table class="tabla_info">
+						<thead>
+							<th class="tabla_info_head" style="border-radius: 10px 0px 0px 10px;">Nombre</th>
+							<th class="tabla_info_head" style="border-radius: 0px 10px 10px 0px;"></th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rubrica para la primera presentación del curso</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px; text-align=right">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rúbrica 2</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Rúbrica mala</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Gonzalo Rojas</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+								<td class="tabla_info_body">
+									<button type="button" class="btn btn-primary" style="width:200px">+ Agregar rúbrica</button>
+								</td>
+							<tr>
+							</tr>
+					</tbody>
+				</table>
+				</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+			<!--GESTIONAR EVALUACIONES-->
+				<p>
+					<a data-toggle="collapse" href="#evaluaciones" role="button" aria-expanded="false" aria-controls="evaluaciones">
+						<h1><i class="fas fa-caret-down"></i> Evaluaciones</h1>
+					</a>
+				</p>
+				<div class="collapse" id="evaluaciones">
+					<p>
+					<table class="tabla_info">
+						<thead>
+							<th class="tabla_info_head" style="border-radius: 10px 0px 0px 10px;">Nombre</th>
+							<th class="tabla_info_head">Curso</th>
+							<th class="tabla_info_head">Inicio</th>
+							<th class="tabla_info_head">Fin</th>
+							<th class="tabla_info_head" style="border-radius: 0px 10px 10px 0px;"></th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Presentación 1</td>
+								<td class="tabla_info_body">CC1337-1 Otoño 2014</td>
+								<td class="tabla_info_body">03/04</td>
+								<td class="tabla_info_body">05/04</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px; text-align=right">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Presentación 2</td>
+								<td class="tabla_info_body">CC1337-1 Otoño 2014</td>
+								<td class="tabla_info_body">01/05</td>
+								<td class="tabla_info_body">05/05</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Presentación 3</td>
+								<td class="tabla_info_body">CC1337-1 Otoño 2014</td>
+								<td class="tabla_info_body">31/05</td>
+								<td class="tabla_info_body">02/06</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Presentación Final</td>
+								<td class="tabla_info_body">CC1337-1 Otoño 2014</td>
+								<td class="tabla_info_body">22/06</td>
+								<td class="tabla_info_body">23/06</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body">
+									<button type="button" class="btn btn-primary" style="width:200px">+ Agregar evaluacion</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+			<!--GESTIONAR CURSOS-->
+				<p>
+					<a data-toggle="collapse" href="#cursos" role="button" aria-expanded="false" aria-controls="cursos">
+						<h1><i class="fas fa-caret-down"></i> Cursos</h1>
+					</a>
+				</p>
+				<div class="collapse" id="cursos">
+					<p>
+					<table class="tabla_info">
+						<thead>
+							<th class="tabla_info_head" style="border-radius: 10px 0px 0px 10px;">Nombre</th>
+							<th class="tabla_info_head">Código</th>
+							<th class="tabla_info_head">Sec.</th>
+							<th class="tabla_info_head">Instancia</th>
+							<th class="tabla_info_head" style="border-radius: 0px 10px 10px 0px;"></th>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Análisis de Software</td>
+								<td class="tabla_info_body">CC1337</td>
+								<td class="tabla_info_body">1</td>
+								<td class="tabla_info_body">Otoño 2014</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px; text-align=right">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Análisis de Software</td>
+								<td class="tabla_info_body">CC1337</td>
+								<td class="tabla_info_body">2</td>
+								<td class="tabla_info_body">Otoño 2014</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Patrones</td>
+								<td class="tabla_info_body">C2222</td>
+								<td class="tabla_info_body">1</td>
+								<td class="tabla_info_body">Primavera 2013</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabla_info_body" style="border-radius: 10px 0px 0px 10px;">Patrones</td>
+								<td class="tabla_info_body">C2222</td>
+								<td class="tabla_info_body">2</td>
+								<td class="tabla_info_body">Primavera 2013</td>
+								<td class="tabla_info_body" style="border-radius: 0px 10px 10px 0px;">
+									<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
+								</td>
+							</tr>
+								<td class="tabla_info_body">
+									<button type="button" class="btn btn-primary" style="width:200px">+ Agregar rúbrica</button>
+								</td>
+							<tr>
+							</tr>
+					</tbody>
+				</table>
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+			
     <br>
     <br>
-    
     <br>
     <br>
- <div class="form-group">
-  <label for="sel1">Seleccione una evaluacion para exportar puntaje:</label>
-  <select class="form-control" id="sel1">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-</div>
+	<!--
+	<div class="form-group" style="width:90%; margin-left:5%">
+		<label for="sel1">Seleccione una evaluacion para exportar puntaje:</label>
+		<select class="form-control" id="sel1">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+		</select>
+	</div>
     <button type="button" class="btn btn-primary btn-sm">Exportar Puntaje</button>
+	-->
 </body>
 </html>
